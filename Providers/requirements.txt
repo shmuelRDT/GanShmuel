@@ -1,0 +1,19 @@
+
+For flask:
+    sudo apt-get install -y python-dev default-libmysqlclient-dev libssl-dev
+    pip install flask-mysql / 
+
+    env:
+        set  and export FLASK_APP=app.py
+
+
+for db:
+    image: mysql:5.7
+    volumes: 
+        connect initsql from providers dir
+    environment: 
+       - "MYSQL_ROOT_PASSWORD=qwerty"
+    export 3306:3306
+CREATE DATABASE providers_db CHARACTER SET utf8 COLLATE utf8_bin;
+use providers_db;
+CREATE TABLE providers ( provider_name VARCHAR(30) NOT NULL );
