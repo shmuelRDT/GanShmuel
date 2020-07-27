@@ -14,6 +14,5 @@ for db:
     environment: 
        - "MYSQL_ROOT_PASSWORD=qwerty"
     export 3306:3306
-CREATE DATABASE providers_db CHARACTER SET utf8 COLLATE utf8_bin;
-use providers_db;
-CREATE TABLE providers ( provider_name VARCHAR(30) NOT NULL );
+
+
